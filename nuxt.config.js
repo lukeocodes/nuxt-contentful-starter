@@ -25,17 +25,34 @@ export default {
 
   generate: {
     async routes() {
-      const posts = await client.getEntries({
-        content_type: "blogPost",
-        order: "-sys.createdAt",
-      });
+      const getPosts = async () => {
+        const posts = await client.getEntries({
+          content_type: "blogPost",
+          order: "-sys.createdAt",
+        });
 
-      return posts.items.map((post) => {
-        return {
-          route: `/${post.fields.slug}`,
-          payload: { ...post, wasBuild: true },
-        };
-      });
+        return posts.items.map((post) => {
+          return {
+            route: `/${post.fields.slug}`,
+            payload: { ...post, wasBuild: true },
+          };
+        });
+      };
+
+      const getAuthors = async () => {
+        const authors = await client.getEntries({
+          content_type: "person",
+        });
+
+        return authors.items.map((author) => {
+          return {
+            route: `/authors/${author.fields.slug}`,
+            payload: { ...author, wasBuild: true },
+          };
+        });
+      };
+
+      return [...(await getPosts()), ...(await getAuthors())];
     },
   },
 
