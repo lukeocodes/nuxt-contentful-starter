@@ -46,7 +46,7 @@ export default {
 
         return authors.items.map((author) => {
           return {
-            route: `/authors/${author.fields.slug}`,
+            route: `/authors/${author.fields.name}`,
             payload: { ...author, wasBuild: true },
           };
         });

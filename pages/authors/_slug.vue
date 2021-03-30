@@ -22,7 +22,7 @@ export default {
     } else {
       const authors = await client.getEntries({
         content_type: "person",
-        "fields.slug[in]": slug,
+        "fields.name[in]": slug,
         limit: 1,
       });
 
