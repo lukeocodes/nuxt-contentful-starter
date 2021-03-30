@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nuxt-link :to="post.fields.slug" class="flex-grow block mt-4">
+    <nuxt-link :to="`/${post.fields.slug}`" class="flex-grow block mt-4">
       <p class="text-xl font-semibold text-gray-900">
         {{ post.fields.title }}
       </p>

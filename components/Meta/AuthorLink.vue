@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="`authors/${author.fields.slug}`">
+  <nuxt-link :to="`/authors/${author.fields.slug}`">
     <slot></slot>
   </nuxt-link>
 </template>
