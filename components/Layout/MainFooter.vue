@@ -28,7 +28,7 @@
         <p class="text-base text-center">
           Sponsored by
           <a href="https://netlify.com" target="_blank">
-            <IconBrandCodepen /> Netlify
+            <IconBrandNetlify /> Netlify
           </a>
         </p>
       </div>
