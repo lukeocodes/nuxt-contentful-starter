@@ -7,8 +7,6 @@ export default {
   env: {
     CONTENTFUL_SPACE: process.env.CONTENTFUL_SPACE,
     CONTENTFUL_ACCESSTOKEN: process.env.CONTENTFUL_ACCESSTOKEN,
-    CONTENTFUL_PERSON: process.env.CONTENTFUL_PERSON,
-    CONTENTFUL_POST_TYPE: process.env.CONTENTFUL_POST_TYPE,
   },
 
   // Target: https://go.nuxtjs.dev/config-target
