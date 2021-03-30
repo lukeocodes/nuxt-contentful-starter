@@ -33,7 +33,7 @@ export default {
       return posts.items.map((post) => {
         return {
           route: `/${post.fields.slug}`,
-          payload: post,
+          payload: { ...post, wasBuild: true },
         };
       });
     },
